@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome to VQA</title>
+    <style>
+      body {
+        
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      header {
+        
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 3em;
+      }
+      nav {
+        
+        padding: 10px;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      a {
+        
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+      
+      section {
+       
+        padding: 20px;
+        text-align: center;
+      }
+      footer {
+      
+        padding: 10px;
+        text-align: center;
+      }
+      form {
+        
+        padding: 20px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+      input[type="file"] {
+        display: block;
+        margin: 10px auto;
+      }
+      input[type="submit"] {
+        background-color: #FFD3B5; /* light orange */
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #FFB6C1; /* light pink */
+      }
+      h2 {
+        color:Maroon;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><p style="color:black;">Please Upload Image</p></h1>
+    </header>
+    
+    <section>
+      <h2>Please Upload Object Image
+         </h2>
+
+      <form action="/index" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">        
+        <label for="name">Please Ask question about Object:</label>
+        <input type="radio" id="object" name="p" value="object">What is the name of the object? 
+        <input type="text" name="txtObject" value="{{obj}}"/>
+        <br>
+        <input type="radio" id="color" name="p" value="color">What is the color of the object? 
+        <input type="text" name="txtColor" value="{{message1}}"/>
+        <br>
+        <input type="radio" id="objCount" name="p" value="objCount">What is the Object Count? 
+        <input type="text" name="txtCount" value="{{count}}"/>
+        <br>
+        <input type="radio" id="objName" name="p" value="txt_name"> Is the object present in the image? 
+        <input type="text" name="txtName" value=""/>
+        
+        <input type="text" name="pred" value="{{pred1}}"/>  
+        <br>      
+        <input type="submit" value="Predict">
+        <br>
+        <img src="{{up_img}}" alt="result" width="300" height="300">
+          
+         
+        
+      </form>
+      
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Page</title>
+</head>
+<style>
+    body {
+      background-image: url({{url_for('static',filename='img/intro.jpg')}});
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size : cover;
+    }
+    p {text-align: center;
+      color:white;
+      font-size: 3em;
+    }
+</style>   
+<body>
+<h1> <p> Introduction </p></h1>
+      <p>Visual Question Answering (VQA) is a field of artificial intelligence that focuses on developing algorithms and models capable of understanding and answering questions about images. It combines computer vision, natural language processing (NLP), and machine learning techniques to bridge the gap between visual information and textual understanding.
+        VQA systems take an image and a corresponding question as input, and their goal is to generate an accurate textual answer. The image can be any visual content, such as photographs or images from the internet, while the questions can range from simple queries about the image's content to more complex inquiries requiring deeper comprehension.
+        To tackle VQA, models typically use a combination of visual feature extraction and language processing. Initially, the visual features are extracted from the image using convolutional neural networks (CNNs) to capture the visual content and represent it in a numerical form. Simultaneously, the question is processed using NLP techniques, including tokenization, word embeddings, and recurrent neural networks (RNNs), to understand its semantic meaning.
+        The visual features and the question representation are then combined and fed into a fusion model, which learns to associate the visual and textual information effectively. This fusion process can be achieved through various techniques, such as attention mechanisms or multimodal fusion networks.
+        Finally, the fused representation is used to generate the answer. This can be done using techniques like classification, where the model predicts a specific answer from a predefined set of possible answers, or through sequence generation, where the model generates a sequence of words that form the answer.
+        VQA has numerous applications, including image understanding, accessibility for visually impaired individuals, and human-computer interaction. It is an active area of research with ongoing efforts to improve the accuracy and understanding capabilities of VQA models, making them more reliable and capable of answering a wide range of visual questions.</p>
+</body>
+</html>
